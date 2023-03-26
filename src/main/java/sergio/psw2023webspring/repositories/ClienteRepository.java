@@ -6,4 +6,5 @@ import sergio.psw2023webspring.model.Cliente;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente,Long> {
+
 }

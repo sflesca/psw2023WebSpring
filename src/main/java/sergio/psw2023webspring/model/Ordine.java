@@ -42,6 +42,7 @@ public class Ordine {
     }
 
     @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "ordine_id")
     private Collection<DettaglioOrdine> dettagli;
 
     public Collection<DettaglioOrdine> getDettagli() {
