@@ -1,5 +1,6 @@
 package sergio.psw2023webspring.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -20,6 +21,7 @@ public class Cliente extends Persona{
     }
 
     @OneToMany(mappedBy = "cliente")
+    @JsonIgnore
     private Collection<Ordine> ordini;
 
     public Collection<Ordine> getOrdini() {
