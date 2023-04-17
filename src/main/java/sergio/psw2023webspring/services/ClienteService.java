@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import sergio.psw2023webspring.model.Cliente;
 import sergio.psw2023webspring.repositories.ClienteRepository;
 
+import java.util.List;
+
 @Service
 public class ClienteService {
     @Autowired
@@ -13,4 +15,6 @@ public class ClienteService {
     public Cliente getCliente(long id){
         return rep.findById(id).get();
     }
+
+    public List<Cliente> getClienti(){return rep.findAll();}
 }
