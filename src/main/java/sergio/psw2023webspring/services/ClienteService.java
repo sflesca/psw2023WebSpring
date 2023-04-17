@@ -17,4 +17,7 @@ public class ClienteService {
     }
 
     public List<Cliente> getClienti(){return rep.findAll();}
+
+    public long crea(Cliente c) { return rep.save(c).getId();
+    }
 }

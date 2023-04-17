@@ -2,9 +2,8 @@ package sergio.psw2023webspring.restcontrollers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import sergio.psw2023webspring.model.Cliente;
 import sergio.psw2023webspring.services.ClienteService;
 
@@ -19,4 +18,9 @@ public class ProvaRest {
 
     @GetMapping
     public List<Cliente> getClienti(){ return serv.getClienti();}
+
+    @PostMapping
+    public ResponseEntity<Long> crea(@RequestBody Cliente c){
+        return  ResponseEntity.ok(serv.crea(c));
+    }
 }
