@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<script language="JavaScript">
+    // window.captureEvents(Event.KEYPRESS); lo fan tutti
+    window.onkeydown = pressed;
+    window.document.onClick = clicked;
+    function pressed(e) { alert("Key pressed: " + e.which);}
+    function clicked() { alert(
+        Mouse Click! "); }
+</script>
+</head>
 <body>
-<a href="/caricacatandprod">Carica Dati</a>
+<p id=“mypara">
+<a href="test.html" onClick="alert('Stai per andare al test!');">Clicca qui</a>
+Testo fuori dal link
+
+    <a href="/caricacatandprod">Carica Dati</a>
 </body>
 </html>
