@@ -28,6 +28,7 @@ public class Cliente extends Persona{
         return ordini;
     }
 
+
     public void setOrdini(Collection<Ordine> ordini) {
         this.ordini = ordini;
     }
