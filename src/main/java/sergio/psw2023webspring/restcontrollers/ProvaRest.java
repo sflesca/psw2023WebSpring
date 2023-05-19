@@ -33,4 +33,10 @@ public class ProvaRest {
     public ResponseEntity<Long> crea(@RequestBody Cliente c){
         return  ResponseEntity.ok(serv.crea(c));
     }
+
+    @CrossOrigin
+    @DeleteMapping
+    public ResponseEntity<Boolean> cancella(@RequestParam(name = "id") long id){
+        return  ResponseEntity.ok(serv.cancella(id));
+    }
 }
