@@ -17,15 +17,18 @@ public class ProvaRest {
     @Autowired
     ClienteService serv;
 
+    @CrossOrigin
     @GetMapping("/all")
     public List<Cliente> getClienti(){ return serv.getClienti();}
 
+    @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Cliente> getCliente(@PathVariable long id){
         Cliente c = serv.getCliente(id);
         return ResponseEntity.ok(c);
     }
 
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<Long> crea(@RequestBody Cliente c){
         return  ResponseEntity.ok(serv.crea(c));
