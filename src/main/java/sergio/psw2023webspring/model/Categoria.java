@@ -1,5 +1,6 @@
 package sergio.psw2023webspring.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -31,6 +32,7 @@ public class Categoria {
     }
 
     @OneToMany(mappedBy = "categoria")
+    @JsonIgnore
     private Collection<Prodotto> prodotti = new LinkedList<>();
 
     public Collection<Prodotto> getProdotti() {

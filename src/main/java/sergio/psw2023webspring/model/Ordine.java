@@ -1,5 +1,6 @@
 package sergio.psw2023webspring.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -31,6 +32,7 @@ public class Ordine {
     }
 
     @ManyToOne(optional = false)
+    @JsonIgnore
     private Cliente cliente;
 
     public Cliente getCliente() {
