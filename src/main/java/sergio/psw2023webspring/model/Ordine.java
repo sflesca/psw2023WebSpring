@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.LinkedList;
 
 @Entity
 public class Ordine {
@@ -45,7 +46,7 @@ public class Ordine {
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "ordine_id")
-    private Collection<DettaglioOrdine> dettagli;
+    private Collection<DettaglioOrdine> dettagli = new LinkedList<>();
 
     public Collection<DettaglioOrdine> getDettagli() {
         return dettagli;

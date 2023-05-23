@@ -38,7 +38,7 @@ public class DettaglioOrdine {
         this.prezzo = prezzo;
     }
 
-    @OneToOne(optional = false)
+    @ManyToOne(optional = false)
     private Prodotto prodotto;
 
     public Prodotto getProdotto() {

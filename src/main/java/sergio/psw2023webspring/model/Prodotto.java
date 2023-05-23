@@ -59,4 +59,7 @@ public class Prodotto {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+
+    @Version
+    private long version;
 }
